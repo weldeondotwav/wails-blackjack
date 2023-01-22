@@ -121,8 +121,6 @@
   justify-content: center;
 }
 
-
-
 button:disabled {
   filter: opacity(0.2);
 }
@@ -143,10 +141,10 @@ button:disabled {
     width: 7em;
     margin-right: 1em;
     margin-left: 1em;
-  
+
     transition: all 0.2s ease-in-out;
 
-    @apply hover:opacity-70
+    @apply hover:opacity-70;
   }
 
   button.new-game-button {
@@ -172,22 +170,18 @@ button:disabled {
     transition: all 100ms ease-in-out;
     margin-right: -5.8em;
     background-color: rgba(36, 36, 36, 1);
-  
+
     /* @apply hover:scale-110; */
     /* @apply hover:-translate-y-5; */
   }
 
-  
-.results-overlay {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  padding: 1em 1em 1em 1em;
-  justify-content: space-between;
-  align-items: center;
-  @apply rounded-md;
-}
-
-
-
+  .results-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    padding: 1em 1em 1em 1em;
+    justify-content: space-between;
+    align-items: center;
+    @apply rounded-md;
+  }
 }

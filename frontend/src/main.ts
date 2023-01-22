@@ -27,7 +27,10 @@ declare global {
 
 function startGame() {
   isGameRunning = true;
-  console.log("🔎 ~ file: main.ts:30 ~ startGame ~ isGameRunning", isGameRunning);
+  console.log(
+    "🔎 ~ file: main.ts:30 ~ startGame ~ isGameRunning",
+    isGameRunning
+  );
   (document.getElementById("hit-button")! as HTMLButtonElement).disabled =
     false;
   (document.getElementById("stand-button")! as HTMLButtonElement).disabled =
@@ -36,9 +39,11 @@ function startGame() {
 
 function stopGame() {
   isGameRunning = false;
-  console.log("🔎 ~ file: main.ts:39 ~ stopGame ~ isGameRunning", isGameRunning);
-  (document.getElementById("hit-button")! as HTMLButtonElement).disabled =
-    true;
+  console.log(
+    "🔎 ~ file: main.ts:39 ~ stopGame ~ isGameRunning",
+    isGameRunning
+  );
+  (document.getElementById("hit-button")! as HTMLButtonElement).disabled = true;
   (document.getElementById("stand-button")! as HTMLButtonElement).disabled =
     true;
 }
