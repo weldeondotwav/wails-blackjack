@@ -71,7 +71,7 @@ func (a *App) MakeRandomCard() Card {
 	return Card{
 		Value: thisVal,
 		Suit:  CardSuit(thisSuit),
-		IsRed: float64(rand.Int()) > float64(0.5), // this is so weird
+		IsRed: thisSuit < 2,
 	}
 
 }
