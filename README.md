@@ -1,4 +1,6 @@
 # wails-blackjack
+![image](https://user-images.githubusercontent.com/50535591/213902680-38d9ec3d-2b8e-48ec-83db-13a461a6f3fb.png)
+
 
 ## About
 
