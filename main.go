@@ -18,7 +18,9 @@ func main() {
 	err := wails.Run(&options.App{
 		Title:            "go-cards",
 		Width:            1100,
+		MinWidth:         550,
 		Height:           800,
+		MinHeight:        650,
 		Assets:           assets,
 		BackgroundColour: &options.RGBA{R: 36, G: 36, B: 36, A: 1},
 		OnStartup:        app.startup,

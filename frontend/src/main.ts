@@ -340,7 +340,7 @@ function openResultsOverlay(winner: string) {
   <h1 class="text-4xl">${winner} wins!</h1>
   <h3 class="text-2xl">Your hand was ${handBestValue(playerCards)}</h3>
   <h3 class="text-2xl">The dealer had ${handBestValue(dealerCards)}</h3>
-  <button id="new-game-button" class="new-game-button">New Game</button>
+  <button id="new-game-button" class="new-game-button game-button">New Game</button>
   </div>  
   `;
 

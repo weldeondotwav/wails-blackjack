@@ -513,10 +513,28 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+button.game-button {
+  border: 2px solid white;
+  width: 7em;
+  margin-right: 1em;
+  margin-left: 1em;
+  transition: all 0.2s ease-in-out
+}
+
+button.game-button:hover {
+  opacity: 0.7;
+}
+
 button.new-game-button {
-  outline-style: solid;
-  outline-width: 2px;
-  outline-color: #fff;
+  border-radius: 0.375rem;
+}
+
+button.hit-button {
+  border-radius: 0.375rem;
+}
+
+button.stand-button {
+  border-radius: 0.375rem;
 }
 
 .player-card-item {
@@ -532,6 +550,16 @@ button.new-game-button {
   background-color: rgba(36, 36, 36, 1);
   /* @apply hover:scale-110; */
   /* @apply hover:-translate-y-5; */
+}
+
+.results-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  padding: 1em 1em 1em 1em;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.375rem;
 }
 
 .h-1\/3 {
@@ -644,7 +672,7 @@ button.new-game-button {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 0em 5em 0em 5em;
+  padding: 0em 5em 2em 5em;
   overflow: wrap;
 }
 
@@ -683,7 +711,7 @@ button.new-game-button {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 5em 5em 0em 5em;
+  padding: 2em 5em 0em 5em;
   overflow: wrap;
   position: relative;
   left: -2.9em;
@@ -691,9 +719,6 @@ button.new-game-button {
 
 .player-card-value-container {
   /* padding-top: 2em; */
-}
-
-.hit-button {
 }
 
 .app-container {
@@ -708,18 +733,6 @@ button.new-game-button {
   justify-content: center;
 }
 
-button.game-button {
-  border: 1px solid white;
-  width: 5em;
-  margin-right: 1em;
-  margin-left: 1em;
-  transition: all 0.2s ease-in-out;
-}
-
-button.new-game-button {
-  /* border: 2px solid white; */
-}
-
 button:disabled {
   filter: opacity(0.2);
 }
@@ -732,12 +745,4 @@ button:disabled {
   z-index: -100;
   align-items: center;
   justify-content: center;
-}
-
-.results-overlay {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  padding: 2em 2em 2em 2em;
-  justify-content: space-between;
 }
