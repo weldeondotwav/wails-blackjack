@@ -80,11 +80,11 @@ function addDealerCard(card: any) {
   });
 
   dealerCards.push(card);
-  recalcDealerHand();
+  calcDealerHand();
 }
 
 function clearAllHands() {
-  // TODO using queryselector in some places, and getelementbyID in others
+  // TODO using querySelector in some places, and getElementByID in others
   document.querySelector("#card-container")!.innerHTML = "";
   document.querySelector("#player-card-container")!.innerHTML = "";
 
@@ -208,7 +208,7 @@ function standButtonCallback() {
   doGameAction("stand");
 }
 
-function recalcPlayerHand() {
+function calcPlayerHand() {
   let playerHandValueAcesOne = calculateHandValue(playerCards, true);
   let playerHandValueAcesEleven = calculateHandValue(playerCards, false);
 
@@ -222,7 +222,7 @@ function recalcPlayerHand() {
   }
 }
 
-function recalcDealerHand() {
+function calcDealerHand() {
   let dealerHandValueAcesOne = calculateHandValue(dealerCards, true);
   let dealerHandValueAcesEleven = calculateHandValue(dealerCards, false);
 
@@ -316,7 +316,7 @@ function addPlayerCard(card: any): void {
   });
 
   playerCards.push(card);
-  recalcPlayerHand();
+  calcPlayerHand();
 }
 
 // picks a random card from the file-level deck, removes it, and returns it
