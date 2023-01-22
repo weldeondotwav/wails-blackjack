@@ -1,5 +1,5 @@
 import "./style.css";
-import "./tailwind_dist/app_tw.css";
+import "./tailwind_dist/style_tw.css";
 
 import {
   CardValueToDisplayString,

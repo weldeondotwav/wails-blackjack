@@ -4,7 +4,7 @@
     "tailwindcss": "^3.2.4"
   },
   "scripts": {
-    "tailwind": "tailwindcss -i ./frontend/src/app.css -o ./frontend/src/tailwind_dist/app_tw.css --watch",
+    "tailwind": "tailwindcss -i ./frontend/src/style.css -o ./frontend/src/tailwind_dist/style_tw.css --watch",
     "wails": "wails dev",
     "dev": "concurrently -P \"{command}\" \"npm:tailwind\" \"npm:wails\""
   }
