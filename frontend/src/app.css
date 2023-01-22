@@ -77,7 +77,8 @@
 }
 
 .card-item:hover {
-  scale: 1.1;
+  scale: 1.05;
+  /* z-index: 100; */
 }
 
 .card-value-top {
@@ -104,18 +105,6 @@
   left: -2.9em;
 }
 
-.player-card-item {
-  border: 1px solid white;
-  width: 8em;
-  height: 12em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0.5em;
-  transition: all 100ms ease-in-out;
-  margin-right: -5.8em;
-  background-color: rgba(36, 36, 36, 1);
-}
 .player-card-value-container {
   /* padding-top: 2em; */
 }
@@ -175,4 +164,22 @@ button:disabled {
   button.new-game-button {
     @apply outline-2 outline-white outline
   }
+
+  .player-card-item {
+    border: 1px solid white;
+    width: 8em;
+    height: 12em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5em;
+    transition: all 100ms ease-in-out;
+    margin-right: -5.8em;
+    background-color: rgba(36, 36, 36, 1);
+  
+    /* @apply hover:scale-110; */
+    /* @apply hover:-translate-y-5; */
+  }
+
+
 }
