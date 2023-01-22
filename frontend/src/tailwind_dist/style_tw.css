@@ -727,6 +727,11 @@ body {
   flex-direction: row;
 }
 
+.card-icon-top {
+  position: absolute;
+  top: 3em;
+}
+
 .card-value-bot {
   display: flex;
   flex-direction: row-reverse;

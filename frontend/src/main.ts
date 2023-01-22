@@ -304,7 +304,7 @@ function addPlayerCard(card: any): void {
     document.querySelector("#player-card-container")!.innerHTML += `
         <div class="player-card-item rounded-xl cursor-default"> 
             <div class="card-value-top text-xl">${val}</div>
-            <div class="card-value-top text-2xl ${
+            <div class="card-icon-top text-2xl ${
               card.IsRed ? "text-red-600" : "text-white"
             }">${cardSuitChar}</div>
             <div class="card-center text-8xl ${
