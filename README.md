@@ -1,19 +1,17 @@
-# README
+# wails-blackjack
 
 ## About
 
-This is the official Wails Vanilla-TS template.
+I wanted to learn about [Wails](https://wails.io), and also decided to sprinkle in some [Tailwind](https://tailwindcss.com/), ended up with this minimal-style blackjack game made with vanilla TS / HTML.
 
-You can configure the project by editing `wails.json`. More information about the project settings can be found
-here: https://wails.io/docs/reference/project-config
+Project started with the [Wails Vanilla-TS template](https://github.com/wailsapp/wails/tree/v2.3.1/v2/pkg/templates/templates/vanilla-ts).
 
-## Live Development
+## Run Locally
 
-To run in live development mode, run `wails dev` in the project directory. This will run a Vite development
-server that will provide very fast hot reload of your frontend changes. If you want to develop in a browser
-and have access to your Go methods, there is also a dev server that runs on http://localhost:34115. Connect
-to this in your browser, and you can call your Go code from devtools.
+1. Run `npm install` in the project root directory.
+2. Also run `npm install` in the `./frontend` directory
+3. Run `npm run dev` in the project root directory. to spin up the live dev environment.
+    - This starts a Tailwind watcher to auto-compile the css, and the wails dev server.
+## Build Locally
 
-## Building
-
-To build a redistributable, production mode package, use `wails build`.
+To build a redistributable, production mode package, use `wails build` from the project root directory.
