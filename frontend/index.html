@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>wailstest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div id="overlay-container" class="overlay-container"></div>
+    <script src="./src/main.ts" type="module"></script>
+    <div id="app" class="app-container">
+      <div id="dealer-card-value-container" class="dealer-card-value-container">
+        <h2>Dealer Stands On <span id="dealer-stands-on-span"></span></h2>
+      </div>
+      <div id="card-container" class="card-container"></div>
+      <div id="dealer-card-value-container" class="dealer-card-value-container">
+        <h2 class="text-4xl">
+          Dealer Hand Value:
+          <span
+            class="underline underline-offset-4"
+            id="dealer-hand-value-span"
+          ></span>
+        </h2>
+      </div>
+
+      <!-- <button id="randCardBtn" onclick="hitTurn()">Hit</button>
+    <button id="randCardBtn" onclick="standTurn()">Stand</button> -->
+
+      <div id="player-card-value-container" class="player-card-value-container">
+        <h2 class="text-4xl">
+          Player Hand Value:
+          <span
+            class="underline underline-offset-4"
+            id="player-hand-value-span"
+          ></span>
+        </h2>
+      </div>
+
+      <div id="player-card-container" class="player-card-container"></div>
+
+      <div class="player-controls-container">
+        <button id="hit-button" class="hit-button game-button">Hit</button>
+        <button id="stand-button" class="stand-button game-button">Stand</button>
+      </div>
+    </div>
+  </body>
+</html>

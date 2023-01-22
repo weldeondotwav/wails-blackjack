@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+#logo {
+  display: block;
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  padding: 10% 0 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-origin: content-box;
+}
+
+.result {
+  height: 20px;
+  line-height: 20px;
+  margin: 1.5rem auto;
+}
+
+.input-box .btn {
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 3px;
+  border: none;
+  margin: 0 0 0 20px;
+  padding: 0 8px;
+  cursor: pointer;
+}
+
+.input-box .btn:hover {
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  color: #333333;
+}
+
+.input-box .input {
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  background-color: rgba(240, 240, 240, 1);
+  -webkit-font-smoothing: antialiased;
+}
+
+.input-box .input:hover {
+  border: none;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.input-box .input:focus {
+  border: none;
+  background-color: rgba(255, 255, 255, 1);
+}
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0em 5em 0em 5em;
+  overflow: wrap;
+}
+
+.card-item {
+  border: 1px solid white;
+  width: 8em;
+  height: 12em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5em;
+  transition: all 100ms ease-in-out;
+}
+
+.card-item:hover {
+  scale: 1.1;
+}
+
+.card-value-top {
+  display: flex;
+  flex-direction: row;
+}
+.card-value-bot {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.card-center {
+  height: 100%;
+  display: contents;
+}
+
+.player-card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 5em 5em 0em 5em;
+  overflow: wrap;
+  position: relative;
+  left: -2.9em;
+}
+
+.player-card-item {
+  border: 1px solid white;
+  width: 8em;
+  height: 12em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5em;
+  transition: all 100ms ease-in-out;
+  margin-right: -5.8em;
+  background-color: rgba(36, 36, 36, 1);
+}
+.player-card-value-container {
+  /* padding-top: 2em; */
+}
+
+.hit-button {
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.player-controls-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+button.game-button {
+  border: 1px solid white;
+  width: 5em;
+  margin-right: 1em;
+  margin-left: 1em;
+
+  transition: all 0.2s ease-in-out;
+}
+
+button.new-game-button {
+  /* border: 2px solid white; */
+  
+}
+
+button:disabled {
+  filter: opacity(0.2);
+}
+
+.overlay-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: -100;
+  align-items: center;
+  justify-content: center;
+}
+
+.results-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  padding: 2em 2em 2em 2em;
+  justify-content: space-between;
+}
+
+@layer components {
+  button.new-game-button {
+    @apply outline-2 outline-white outline
+  }
+}
