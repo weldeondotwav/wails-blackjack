@@ -6,8 +6,6 @@ export function CardValueToDisplayString(arg1:number):Promise<string>;
 
 export function CardValueToWord(arg1:number):Promise<string>;
 
-export function Greet(arg1:string):Promise<string>;
-
 export function MakeRandomCard():Promise<main.Card>;
 
 export function NewStandardDeck():Promise<main.Deck>;

@@ -10,10 +10,6 @@ export function CardValueToWord(arg1) {
   return window['go']['main']['App']['CardValueToWord'](arg1);
 }
 
-export function Greet(arg1) {
-  return window['go']['main']['App']['Greet'](arg1);
-}
-
 export function MakeRandomCard() {
   return window['go']['main']['App']['MakeRandomCard']();
 }
