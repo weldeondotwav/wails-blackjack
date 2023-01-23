@@ -4,20 +4,26 @@ import "./tailwind_dist/style_tw.css";
 import {
   CardValueToDisplayString,
   NewStandardDeck,
-} from "../wailsjs/go/main/App";
+} from "../wailsjs/go/card/CardLib";
+
+import {DefaultConfig, NewDefaultGame} from "../wailsjs/go/blackjack/BlackjackLib"
+import {BlackjackGame} from "../wailsjs/go/blackjack/BlackjackGame"
+import "../wailsjs/go/blackjack/BlackjackCfg"
 
 // TODO
 // - Doesn't handle natural blackjack advantage over other blackjack
 // - Evaluate my RNG source
 // - Card draw animations?
 
-var thisCardDeck: any;
-var playerCards: any[] = [];
-var dealerCards: any[] = [];
+// var thisCardDeck: any;
+// var playerCards: any[] = [];
+// var dealerCards: any[] = [];
 
-const DEALER_STANDS_ON = 17;
+// const DEALER_STANDS_ON = 17;
 
-var isGameRunning: boolean = true;
+// var isGameRunning: boolean = true;
+
+var blackjack_game_instance: blackjack.BlackjackGame;
 
 declare global {
   interface Window {
@@ -293,7 +299,7 @@ function addPlayerCard(card: any): void {
       cardSuitChar = "\u2662"; // diamonds
       break;
     case 2:
-      cardSuitChar = "\u2664"; // clubs
+      cardSuitChar = "\u2667"; // clubs
       break;
     case 3:
       cardSuitChar = "\u2664"; // spades
@@ -370,13 +376,21 @@ function closeResultsOverlay() {
 //===============================================================
 
 function main() {
-  document.getElementById("dealer-stands-on-span")!.innerHTML =
-    DEALER_STANDS_ON.toString();
+  NewDefaultGame().then(game => {
+    blackjack_game_instance = game;
+    DefaultConfig().then(cfg => {
+      blackjack_game_instance.Config = cfg;
+    });
+  })
+  // document.getElementById("dealer-stands-on-span")!.innerHTML =
+  //   DEALER_STANDS_ON.toString();
 
-  NewStandardDeck().then((deck) => {
-    thisCardDeck = deck;
-    initGame();
-  });
+  // NewStandardDeck().then((deck) => {
+  //   thisCardDeck = deck;
+  //   initGame();
+  // });
+
+
 
   document.getElementById("hit-button")!.onclick = hitButtonCallback;
   document.getElementById("stand-button")!.onclick = standButtonCallback;
