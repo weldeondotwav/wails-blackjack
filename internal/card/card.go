@@ -97,6 +97,16 @@ func (d *Deck) PickRandom() *Card {
 	return &retCard;
 }
 
+func (c *CardLib) PickRandomN(deck *Deck, numToPick int) []Card {
+	outCards := []Card{}
+
+	for i := 0; i < numToPick; i++ {
+		outCards = append(outCards, *deck.PickRandom())
+	}
+
+	return outCards
+}
+
 // Returns a standard 52-card deck
 func (c *CardLib) NewStandardDeck() Deck {
 	// one of each value, in each suit

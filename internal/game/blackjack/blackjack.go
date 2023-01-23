@@ -49,12 +49,14 @@ func (g *BlackjackLib) NewDefaultGame() *BlackjackGame {
 	outGame.Config = bl.DefaultConfig()
 	outGame.Deck = cl.NewStandardDeck()
 	outGame.IsRunning = false
+	outGame.PlayerHand = cl.PickRandomN(&outGame.Deck, 2);
+	outGame.DealerHand = cl.PickRandomN(&outGame.Deck, 1);
 
 	return &outGame
 }
 
 // Empties the hands of both the player and the dealer
-func (g *BlackjackGame) ClearHands() {
+func (b *BlackjackLib) ClearHands(g *BlackjackGame) {
 	g.DealerHand = nil
 	g.PlayerHand = nil
 }
@@ -72,7 +74,7 @@ func (g *BlackjackGame) CalculateHandValue(hand []card.Card, acesAsOne bool) int
 }
 
 // Returns the highest interpretable value of a hand
-func (g *BlackjackGame) CalculateBestHandValue(hand []card.Card) int {
+func (b *BlackjackLib) CalculateBestHandValue(g *BlackjackGame, hand []card.Card) int {
 	standardVal := g.CalculateHandValue(hand, true)
 	aceElevenVal := g.CalculateHandValue(hand, false)
 

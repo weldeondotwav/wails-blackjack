@@ -9,3 +9,5 @@ export function CardValueToWord(arg1:number):Promise<string>;
 export function MakeRandomCard():Promise<card.Card>;
 
 export function NewStandardDeck():Promise<card.Deck>;
+
+export function PickRandomN(arg1:card.Deck,arg2:number):Promise<Array<card.Card>>;

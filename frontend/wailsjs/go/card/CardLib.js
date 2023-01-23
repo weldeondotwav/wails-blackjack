@@ -17,3 +17,7 @@ export function MakeRandomCard() {
 export function NewStandardDeck() {
   return window['go']['card']['CardLib']['NewStandardDeck']();
 }
+
+export function PickRandomN(arg1, arg2) {
+  return window['go']['card']['CardLib']['PickRandomN'](arg1, arg2);
+}

@@ -22,8 +22,8 @@ func main() {
 	blackJackLib := &blackjack.BlackjackLib{}
 	blackJackCfg := &blackjack.BlackjackConfig{}
 
-	// Create application with options
-	err := wails.Run(&options.App{
+
+	appOpts := &options.App{
 		Title:            "go-cards",
 		Width:            1100,
 		MinWidth:         550,
@@ -39,7 +39,9 @@ func main() {
 			blackJackLib,
 			blackJackCfg,
 		},
-	})
+	}
+	// Create application with options
+	err := wails.Run(appOpts)
 
 	if err != nil {
 		println("Error:", err.Error())
