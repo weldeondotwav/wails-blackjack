@@ -4,5 +4,6 @@
     "tailwindcss",
     "wailsapp",
     "wailsjs"
-  ]
+  ],
+  "godot_tools.scene_file_config": "d:\\dev\\wailstest\\wailstest\\internal\\game\\blackjack\\blackjack.go"
 }

@@ -5,6 +5,8 @@ import (
 
 	"github.com/wailsapp/wails/v2"
 	"github.com/wailsapp/wails/v2/pkg/options"
+	"github.com/weldeondotwav/wails-blackjack/internal/card"
+	"github.com/weldeondotwav/wails-blackjack/internal/game/blackjack"
 )
 
 //go:embed all:frontend/dist
@@ -13,6 +15,12 @@ var assets embed.FS
 func main() {
 	// Create an instance of the app structure
 	app := NewApp()
+
+	cardLib := card.NewCardLib()
+
+	blackJack := &blackjack.BlackjackGame{}
+	blackJackLib := &blackjack.BlackjackLib{}
+	blackJackCfg := &blackjack.BlackjackConfig{}
 
 	// Create application with options
 	err := wails.Run(&options.App{
@@ -26,6 +34,10 @@ func main() {
 		OnStartup:        app.startup,
 		Bind: []interface{}{
 			app,
+			cardLib,
+			blackJack,
+			blackJackLib,
+			blackJackCfg,
 		},
 	})
 

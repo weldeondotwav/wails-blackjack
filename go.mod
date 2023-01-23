@@ -1,4 +1,4 @@
-module changeme
+module github.com/weldeondotwav/wails-blackjack
 
 go 1.18
 
