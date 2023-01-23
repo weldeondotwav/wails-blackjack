@@ -7,7 +7,7 @@ import (
 )
 
 type CardLib struct {
-	Deck *Deck
+	Deck *Deck `json:"deck,omitempty"`
 }
 
 func NewCardLib() *CardLib {
@@ -16,13 +16,13 @@ func NewCardLib() *CardLib {
 
 // Struct that holds a collection of cards
 type Deck struct {
-	Cards []Card
+	Cards []Card `json:"cards,omitempty"`
 }
 
 type Card struct {
-	Value int
-	Suit  CardSuit
-	IsRed bool
+	Value int      `json:"value,omitempty"`
+	Suit  CardSuit `json:"suit,omitempty"`
+	IsRed bool     `json:"is_red,omitempty"`
 }
 
 // TODO naming on these is bad

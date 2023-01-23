@@ -8,19 +8,19 @@ import (
 // Implementation of the game Blackjack
 
 type BlackjackGame struct {
-	Deck       card.Deck
-	Config     *BlackjackConfig
-	IsRunning  bool
-	PlayerHand []card.Card
-	DealerHand []card.Card
+	Deck       card.Deck        `json:"deck,omitempty"`
+	Config     *BlackjackConfig `json:"config,omitempty"`
+	IsRunning  bool             `json:"is_running,omitempty"`
+	PlayerHand []card.Card      `json:"player_hand,omitempty"`
+	DealerHand []card.Card      `json:"dealer_hand,omitempty"`
 }
 
 type BlackjackConfig struct {
-	DealerStandsOn int
-	BlackjackValue int
+	DealerStandsOn int `json:"dealer_stands_on,omitempty"`
+	BlackjackValue int `json:"blackjack_value,omitempty"`
 }
 
-type BlackjackLib struct {}
+type BlackjackLib struct{}
 
 // =============== Exposed API ===============
 
