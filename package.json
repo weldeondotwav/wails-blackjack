@@ -6,6 +6,6 @@
   "scripts": {
     "tailwind": "tailwindcss -i ./frontend/src/style.css -o ./frontend/src/tailwind_dist/style_tw.css --watch",
     "wails": "wails dev",
-    "dev": "concurrently -P \"{command}\" \"npm:tailwind\" \"npm:wails\""
+    "dev": "concurrently \"npm:tailwind\" \"npm:wails\""
   }
 }
